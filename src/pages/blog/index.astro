@@ -4,11 +4,12 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import FormattedDate from '../../components/FormattedDate';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import PostList from '@/components/PostList';
 import { ASTRO_VERSION } from 'node_modules/astro/dist/core/constants';
+import Blog from '@/components/Blog';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -92,10 +93,7 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<PostList client:load posts={posts} search_term={
-				(() => {
-					console.log(Astro.url.searchParams); 
-					return "";})()}/>
+			<Blog posts={posts} client:load/>
 		</main>
 		<Footer />
 	</body>
