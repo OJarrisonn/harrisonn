@@ -22,10 +22,13 @@ export default function PostList({ posts, term }: {posts: {
                 <div key={post.id}>
                     <a href={`/blog/${post.slug}/`}>
                         <img width={720} height={360} src={post.data.heroImage} alt="" />
-                        <h4 className="title">{post.data.title}</h4>
-                        <p className="date">
-                            <FormattedDate date={post.data.pubDate} />
-                        </p>
+                        <div>
+                            <h4 className="title">{post.data.title}</h4>
+                            <p>{post.data.description}</p>
+                            <p className="date">
+                                <FormattedDate date={post.data.pubDate} />
+                            </p>
+                        </div>
                     </a>
                 </div>
             ))
