@@ -18,7 +18,7 @@ export default function PostList({ posts, term }: {posts: {
         {
             posts.filter((value) => {
                 return value.data.title.toLowerCase().includes(term.toLowerCase());
-            }).map((post) => (
+            }).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()).map((post) => (
                 <div key={post.id}>
                     <a href={`/blog/${post.slug}/`}>
                         <img width={720} height={360} src={post.data.heroImage} alt="" />
