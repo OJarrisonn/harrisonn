@@ -17,6 +17,7 @@ export default function Blog({posts}) {
                     value={term}
                     onChange={handleOnSearch}
                     placeholder="Search posts"
+                    style={{borderRadius: 8}}
                     />
                 
             </div>
