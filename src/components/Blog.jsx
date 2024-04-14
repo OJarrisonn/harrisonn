@@ -11,13 +11,15 @@ export default function Blog({posts}) {
     }
 
     return <>
-            <Input 
-                type="text" 
-                value={term} 
-                onChange={handleOnSearch} 
-                placeholder="Search posts" 
-                />
-            <div className="h-4"></div>
+            <div style={{marginBottom: 16}}>
+                <Input
+                    type="text"
+                    value={term}
+                    onChange={handleOnSearch}
+                    placeholder="Search posts"
+                    />
+                
+            </div>
 			<PostList posts={posts} term={term}/>
     </>;
 }
