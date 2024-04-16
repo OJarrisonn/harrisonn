@@ -88,6 +88,10 @@ p {
 }
 .prose p {
 	margin-bottom: 2em;
+	text-align: justify;
+}
+.title p {
+	text-align: center;
 }
 textarea {
 	width: 100%;
@@ -157,3 +161,4 @@ ul {
     list-style: disc;
 	margin-bottom: 2rem;
   }
+
