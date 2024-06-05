@@ -1,5 +1,5 @@
 ---
-title: '[MAC0470#06] - Nu scripts pt. 2'
+title: '[MAC0470#07] - Nu scripts pt. 2'
 description: 'Mais algumas completions'
 pubDate: 'May 31 2024'
 heroImage: '/nuscripts.jpg'
