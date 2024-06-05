@@ -1,5 +1,5 @@
 ---
-title: '[MAC0470#07] - Nu scripts pt. 3'
+title: '[MAC0470#08] - Nu scripts pt. 3'
 description: 'ASDF'
 pubDate: 'Jun 05 2024'
 heroImage: '/nuscripts.jpg'
