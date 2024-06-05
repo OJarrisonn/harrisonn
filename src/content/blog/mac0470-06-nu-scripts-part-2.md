@@ -15,7 +15,7 @@ Para gerar completions, além das flags padrão ddo script, existem as _tasks_. 
 
 A lista de _tasks_ disponível depende do projeto e pra isso existe a _task_ `tasks` que lista todas as _tasks_ disponíveis (embora possa ser lenta). Um pequeno exemplo de saída produzido pelo `./gradlew tasks`
 
-```
+```txt
 Application tasks
 -----------------
 run - Runs this project as a JVM application
@@ -35,7 +35,7 @@ def "nu-complete gradlew" [] {
 
 Isso produz tabelas como:
 
-```
+```txt
 ╭────┬────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────╮
 │  # │                    task                    │                            description                             │
 ├────┼────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
@@ -50,6 +50,6 @@ Note que o comando `parse` vai ignorar linhas que não sigam o padrão da regex 
 
 ## Git Clone
 
-O script para _completions_ do `git` não possuía completions para o subcomando `clone`. Criar completions para comandos do git é tão simples quanto observar `git clone --help` e então listar as flags. 
+O script para _completions_ do `git` não possuía completions para o subcomando `clone`. Criar completions para comandos do git é tão simples quanto observar `git clone --help` e então listar as flags.
 
 A parte boa disso é que eu passo a conhecer uma centena de novos conceitos sobre git que eu não sabia, como por exemplo: git permite que o clone seja feito de um repositório local e pode usar ou não _hardlinks_ usando ou não o protocolo do git.
