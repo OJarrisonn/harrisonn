@@ -19,7 +19,7 @@ Fizemos tudo em um container com Debian Testing e instalamos as dependências li
 
 ## Criando o `.dsc`
 
-Após nos confundir um pouco com as instruções. Executamos o `./release.sh nu` para produzir os arquivos para a gerar uma release. Ajustamos todos os `FIXME` nos arquivos `debian/control`, `debian/copyright` e `debian/changelog`. E executamos o `./build.sh nu`. Finalmente isso nos gerou um `rust-nu_0.94.2-1.dsc`. 
+Após nos confundir um pouco com as instruções. Executamos o `./release.sh nu` para produzir os arquivos para a gerar uma release. Ajustamos todos os `FIXME` nos arquivos `debian/control`, `debian/copyright` e `debian/changelog`. E executamos o `./build.sh nu`. Finalmente isso nos gerou um `rust-nu_0.94.2-1.dsc`.
 
 Infelizmente, aqui se encerra nossa jornada. Para poder gerar um `.deb` do `.dsc`, encontramos uma problema com uma centena de dependências:
 
