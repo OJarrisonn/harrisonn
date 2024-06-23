@@ -11,9 +11,13 @@ import PostList from '@/components/PostList';
 import { ASTRO_VERSION } from 'node_modules/astro/dist/core/constants';
 import Blog from '@/components/Blog';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const posts = (await getCollection('blog')).sort((a, b) => {
+	const dateComparison = b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+	if (dateComparison !== 0) {
+		return dateComparison;
+	}
+	return b.data.title.localeCompare(a.data.title);
+});
 ---
 
 <!doctype html>

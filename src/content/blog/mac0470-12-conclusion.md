@@ -1,7 +1,7 @@
 ---
 title: '[MAC0470#12] - O Fim?'
 description: 'Conclusão da Disciplina'
-pubDate: 'Jun 06 2024'
+pubDate: 'Jun 23 2024'
 heroImage: '/nuscripts.jpg'
 ---
 
