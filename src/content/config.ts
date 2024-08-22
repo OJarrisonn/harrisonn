@@ -23,8 +23,7 @@ const patch_hub = defineCollection({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
-		
 	}),
 });
 
-export const collections = { blog, 'patch-hub': patch_hub };
+export const collections = { blog, "patch-hub": patch_hub };
