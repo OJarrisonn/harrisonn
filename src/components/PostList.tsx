@@ -4,6 +4,7 @@ import FormattedDate from "./FormattedDate";
 export default function PostList({
 	posts,
 	term,
+	base_url,
 }: {
 	posts: {
 		id: string;
@@ -19,6 +20,7 @@ export default function PostList({
 		};
 	}[];
 	term: string;
+	base_url: string;
 }) {
 	return (
 		<div className="grid grid-cols-2 gap-4">
@@ -29,7 +31,7 @@ export default function PostList({
 				.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 				.map((post) => (
 					<div key={post.id}>
-						<a href={`/blog/${post.slug}/`}>
+						<a href={`/${base_url}/${post.slug}/`}>
 							<img
 								width={720}
 								height={360}

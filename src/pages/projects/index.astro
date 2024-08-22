@@ -1,0 +1,51 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import { SITE_DESCRIPTION } from "@/consts";
+
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={"Projects"} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Projects</h1>
+			<p>
+				Checkout some projects I'm involved.
+			</p>
+			<div class="project-list">
+                <ProjectCard
+                    id="patch-hub"
+                    title="Patch Hub"
+                    description="A CLI visualizer for linux kernel patches."
+                    image="/blog-placeholder-1.jpg" />
+            </div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	body {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	main {
+		margin: 0 auto auto auto;
+		flex-grow: 1;
+	}
+
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

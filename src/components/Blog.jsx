@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PostList from "./PostList";
 import { Input } from "./ui/input";
 
-export default function Blog({ posts }) {
+export default function Blog({ posts, base_url }) {
 	const [term, setTerm] = useState("");
 
 	function handleOnSearch({ target = {} }) {
@@ -21,7 +21,7 @@ export default function Blog({ posts }) {
 					style={{ borderRadius: 8 }}
 				/>
 			</div>
-			<PostList posts={posts} term={term} />
+			<PostList posts={posts} term={term} base_url={base_url} />
 		</>
 	);
 }
